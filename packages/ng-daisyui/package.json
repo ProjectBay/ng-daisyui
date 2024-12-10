@@ -1,0 +1,14 @@
+{
+  "name": "@ng-daisyui/root",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/core": "^18.2.0",
+    "jest-preset-angular": "~14.1.0",
+    "clsx": "^2.1.1",
+    "class-variance-authority": "^0.7.1",
+    "daisyui": "^4.12.20",
+    "@nx/angular": "19.8.14"
+  },
+  "sideEffects": false,
+  "dependencies": {}
+}

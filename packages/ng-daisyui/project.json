@@ -1,0 +1,43 @@
+{
+  "name": "ng-daisyui",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/ng-daisyui/src",
+  "prefix": "dui",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:package",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "project": "packages/ng-daisyui/ng-package.json",
+        "tailwindConfig": "packages/ng-daisyui/tailwind.config.js"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "packages/ng-daisyui/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "packages/ng-daisyui/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "packages/ng-daisyui/jest.config.ts"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    },
+    "version": {
+      "executor": "@jscutlery/semver:version",
+      "options": {
+        "preset": "angular"
+      }
+    }
+  }
+}
